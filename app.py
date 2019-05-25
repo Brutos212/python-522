@@ -11,7 +11,7 @@ import blueprints.gitlab
 import blueprints.jenkins
 
 app = flask.Flask(__name__)
-
+app.secret_key = 'SECRET_KEY'
 app.register_blueprint(blueprints.auth.blueprint)
 app.register_blueprint(blueprints.docker.blueprint)
 app.register_blueprint(blueprints.gitlab.blueprint)
